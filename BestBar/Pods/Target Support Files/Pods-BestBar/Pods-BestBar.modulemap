@@ -1,0 +1,6 @@
+framework module Pods_BestBar {
+  umbrella header "Pods-BestBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

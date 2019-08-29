@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33E794F802B906A8F98EB218 /* Pods_BestBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D07F3F2BCCCE9D7E87DD25 /* Pods_BestBar.framework */; };
 		7F298699230FF56800B87B11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F298698230FF56800B87B11 /* AppDelegate.swift */; };
 		7F29869B230FF56800B87B11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29869A230FF56800B87B11 /* ViewController.swift */; };
 		7F29869E230FF56800B87B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F29869C230FF56800B87B11 /* Main.storyboard */; };
 		7F2986A0230FF56C00B87B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F29869F230FF56C00B87B11 /* Assets.xcassets */; };
 		7F2986A3230FF56C00B87B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2986A1230FF56C00B87B11 /* LaunchScreen.storyboard */; };
+		7FADBC10231037930072FE02 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC0F231037930072FE02 /* MapViewController.swift */; };
+		7FADBC122317C2000072FE02 /* BarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC112317C2000072FE02 /* BarAnnotation.swift */; };
+		7FADBC142317D8170072FE02 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC132317D8170072FE02 /* FirebaseClient.swift */; };
+		7FADBC162317DC8F0072FE02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FADBC152317DC8F0072FE02 /* GoogleService-Info.plist */; };
+		7FADBC192317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC182317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46D07F3F2BCCCE9D7E87DD25 /* Pods_BestBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AF23D3BCF20F18D7C703CE /* Pods-BestBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestBar.debug.xcconfig"; path = "Target Support Files/Pods-BestBar/Pods-BestBar.debug.xcconfig"; sourceTree = "<group>"; };
+		75A2C4E699DA9480DB58BF7F /* Pods-BestBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestBar.release.xcconfig"; path = "Target Support Files/Pods-BestBar/Pods-BestBar.release.xcconfig"; sourceTree = "<group>"; };
 		7F298695230FF56800B87B11 /* BestBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F298698230FF56800B87B11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F29869A230FF56800B87B11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,11 @@
 		7F29869F230FF56C00B87B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F2986A2230FF56C00B87B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F2986A4230FF56C00B87B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FADBC0F231037930072FE02 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7FADBC112317C2000072FE02 /* BarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnnotation.swift; sourceTree = "<group>"; };
+		7FADBC132317D8170072FE02 /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
+		7FADBC152317DC8F0072FE02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7FADBC182317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E794F802B906A8F98EB218 /* Pods_BestBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A1C4620BCFC498A908C5FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52AF23D3BCF20F18D7C703CE /* Pods-BestBar.debug.xcconfig */,
+				75A2C4E699DA9480DB58BF7F /* Pods-BestBar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7F29868C230FF56700B87B11 = {
 			isa = PBXGroup;
 			children = (
 				7F298697230FF56800B87B11 /* BestBar */,
 				7F298696230FF56800B87B11 /* Products */,
+				24A1C4620BCFC498A908C5FA /* Pods */,
+				B3B2CB41F9888D20FC15F29E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,35 @@
 		7F298697230FF56800B87B11 /* BestBar */ = {
 			isa = PBXGroup;
 			children = (
+				7FADBC172317E3510072FE02 /* Extensions */,
 				7F298698230FF56800B87B11 /* AppDelegate.swift */,
 				7F29869A230FF56800B87B11 /* ViewController.swift */,
 				7F29869C230FF56800B87B11 /* Main.storyboard */,
 				7F29869F230FF56C00B87B11 /* Assets.xcassets */,
 				7F2986A1230FF56C00B87B11 /* LaunchScreen.storyboard */,
 				7F2986A4230FF56C00B87B11 /* Info.plist */,
+				7FADBC0F231037930072FE02 /* MapViewController.swift */,
+				7FADBC112317C2000072FE02 /* BarAnnotation.swift */,
+				7FADBC132317D8170072FE02 /* FirebaseClient.swift */,
+				7FADBC152317DC8F0072FE02 /* GoogleService-Info.plist */,
 			);
 			path = BestBar;
+			sourceTree = "<group>";
+		};
+		7FADBC172317E3510072FE02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7FADBC182317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3B2CB41F9888D20FC15F29E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46D07F3F2BCCCE9D7E87DD25 /* Pods_BestBar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F2986A7230FF56C00B87B11 /* Build configuration list for PBXNativeTarget "BestBar" */;
 			buildPhases = (
+				5BC29ECD3305A5693008540E /* [CP] Check Pods Manifest.lock */,
 				7F298691230FF56800B87B11 /* Sources */,
 				7F298692230FF56800B87B11 /* Frameworks */,
 				7F298693230FF56800B87B11 /* Resources */,
+				1A1F374AB792C6ED9A19E827 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F2986A3230FF56C00B87B11 /* LaunchScreen.storyboard in Resources */,
+				7FADBC162317DC8F0072FE02 /* GoogleService-Info.plist in Resources */,
 				7F2986A0230FF56C00B87B11 /* Assets.xcassets in Resources */,
 				7F29869E230FF56800B87B11 /* Main.storyboard in Resources */,
 			);
@@ -130,12 +180,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A1F374AB792C6ED9A19E827 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BestBar/Pods-BestBar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BestBar/Pods-BestBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BC29ECD3305A5693008540E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BestBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F298691230FF56800B87B11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FADBC192317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift in Sources */,
 				7F29869B230FF56800B87B11 /* ViewController.swift in Sources */,
+				7FADBC10231037930072FE02 /* MapViewController.swift in Sources */,
+				7FADBC142317D8170072FE02 /* FirebaseClient.swift in Sources */,
+				7FADBC122317C2000072FE02 /* BarAnnotation.swift in Sources */,
 				7F298699230FF56800B87B11 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +393,7 @@
 		};
 		7F2986A8230FF56C00B87B11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52AF23D3BCF20F18D7C703CE /* Pods-BestBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -292,12 +406,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.belfastlabs.BestBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7F2986A9230FF56C00B87B11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A2C4E699DA9480DB58BF7F /* Pods-BestBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,7 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.belfastlabs.BestBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
