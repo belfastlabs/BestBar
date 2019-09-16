@@ -14,25 +14,28 @@ import MapKit
 final class FirebaseClient: NSObject {
     static var sharedInstance: FirebaseClient = FirebaseClient()
     
-//    func fetchBarLocations() {
-//        let db = Firestore.firestore()
-//        let dbCall = "belfast"
-//
-//        db.collection(dbCall).addSnapshotListener() { (querySnapshot, err) in
-//            guard let documents = querySnapshot?.documents else {
-//                print("Error retrieving locations: \(err!)")
-//                return
-//            }
-//
-//            let annotationMap = documents.compactMap({
-//                $0.data().flatMap({ (data) in
-//                    return BarAnnotation(title: data.key["title"], locationName: <#T##String#>, coordinate: locationWithGeopoint(geopoint: <#T##GeoPoint#>))
-//                })
-//            })
-//
-//
-//        }
-//    }
+    func fetchBarLocations(barAnnotationList: BarAnnotationList) {
+        let db = Firestore.firestore()
+        let dbCall = "belfast"
+        var annotationMap: [BarAnnotation] = []
+
+        db.collection(dbCall).addSnapshotListener() { (querySnapshot, err) in
+            guard let documents = querySnapshot?.documents else {
+                print("Error retrieving locations: \(err!)")
+                return
+            }
+            
+            annotationMap = documents.compactMap({
+                $0.data().flatMap({ (data) in
+                    return BarAnnotation(dictionary: data)
+                })
+            })
+            
+            DispatchQueue.main.async {
+                
+            }
+        }
+    }
     
     func locationWithGeopoint(geopoint: GeoPoint) -> CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: geopoint.latitude, longitude: geopoint.longitude)

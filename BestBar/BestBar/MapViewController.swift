@@ -8,12 +8,14 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     let locationManager = CLLocationManager()
     let initialLocation = CLLocation(latitude: 54.6004, longitude: -5.9262)
     var annotationSet: [MKAnnotation] = []
+    var barAnnotationList = BarAnnotationList()
     
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
@@ -30,39 +32,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         centerMapOnLocation(location: initialLocation)
-        setupAnnotations()
-    }
-    
-    func setupAnnotations() {
-        let national = BarAnnotation(title: "The National",
-                                     locationName: "Boutique bar within city centre",
-                                     coordinate: CLLocationCoordinate2D(latitude: 54.6004, longitude: -5.9262))
-        mapView.addAnnotation(national)
-        
-        let merchant = BarAnnotation(title: "THe Merchant Hotel",
-                                     locationName: "Luxurious and premium setting",
-                                     coordinate: CLLocationCoordinate2D(latitude: 54.6012, longitude: -5.9257))
-        mapView.addAnnotation(merchant)
-        
-        let spaniard = BarAnnotation(title: "The Spaniard",
-                                     locationName: "Small and full of charm",
-                                     coordinate: CLLocationCoordinate2D(latitude: 54.6010, longitude: -5.9263))
-        mapView.addAnnotation(spaniard)
-        
-        let dirtyOnion = BarAnnotation(title: "Dirty Onion",
-                                       locationName: "Rustic and industrail drinking experience",
-                                       coordinate: CLLocationCoordinate2D(latitude: 54.6017, longitude: -5.9266))
-        mapView.addAnnotation(dirtyOnion)
-        
-        let clothEar = BarAnnotation(title: "The Cloth Ear",
-                                     locationName: "One of Belfast's oldest pubs",
-                                     coordinate: CLLocationCoordinate2D(latitude: 54.6012, longitude: -5.9263))
-        mapView.addAnnotation(clothEar)
-        
-        let thirstyGoat = BarAnnotation(title: "The Thirsty Goat",
-                                        locationName: "Perfect for those with a thirst",
-                                        coordinate: CLLocationCoordinate2D(latitude: 54.6013, longitude: -5.9262))
-        mapView.addAnnotation(thirstyGoat)
+        fetchBarLocations()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -80,6 +50,31 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func fetchBarLocations() {
+        let db = Firestore.firestore()
+        let dbCall = "belfast"
+        
+        db.collection(dbCall).addSnapshotListener() { (querySnapshot, err) in
+            guard let documents = querySnapshot?.documents else {
+                print("Error retrieving locations: \(err!)")
+                return
+            }
+            
+            let annotationMap = documents.compactMap({
+                $0.data().flatMap({ (data) in
+                    return BarAnnotation(dictionary: data)
+                })
+            })
+            
+            DispatchQueue.main.async {
+                for annotation in annotationMap {
+                    self.mapView.addAnnotation(annotation)
+                }
+                self.barAnnotationList.populateList(map: annotationMap)
+            }
+        }
     }
 
     /*
@@ -111,9 +106,15 @@ extension MapViewController: MKMapViewDelegate {
             // 5
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         }
         return view
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let vc = UIStoryboard(name: "BarDetailView", bundle: nil).instantiateViewController(withIdentifier: "BarDetailViewController") as! BarDetailViewController
+        vc.barTitle = ((view.annotation?.title)!)!
+        vc.barSubtitle = ((view.annotation?.subtitle)!)!
+        self.present(vc, animated: true, completion: nil)
     }
 }

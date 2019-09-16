@@ -13,11 +13,22 @@
 		7F29869E230FF56800B87B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F29869C230FF56800B87B11 /* Main.storyboard */; };
 		7F2986A0230FF56C00B87B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F29869F230FF56C00B87B11 /* Assets.xcassets */; };
 		7F2986A3230FF56C00B87B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2986A1230FF56C00B87B11 /* LaunchScreen.storyboard */; };
+		7F31D89C232AED7C00923AC2 /* BarCalloutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F31D89A232AED7C00923AC2 /* BarCalloutViewController.swift */; };
+		7F31D89D232AED7C00923AC2 /* BarCalloutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F31D89B232AED7C00923AC2 /* BarCalloutViewController.xib */; };
+		7F46C9ED232BA15C005B5420 /* buttonWelcome@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F46C9EA232BA155005B5420 /* buttonWelcome@3x.png */; };
+		7F46C9EE232BA15C005B5420 /* btn black.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F46C9EB232BA158005B5420 /* btn black.png */; };
+		7F46C9EF232BA15C005B5420 /* btn blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F46C9EC232BA15C005B5420 /* btn blue@3x.png */; };
+		7F46C9F1232BA92F005B5420 /* BarDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */; };
+		7F46C9F3232BE7B7005B5420 /* BarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */; };
 		7FADBC10231037930072FE02 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC0F231037930072FE02 /* MapViewController.swift */; };
 		7FADBC122317C2000072FE02 /* BarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC112317C2000072FE02 /* BarAnnotation.swift */; };
 		7FADBC142317D8170072FE02 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC132317D8170072FE02 /* FirebaseClient.swift */; };
 		7FADBC162317DC8F0072FE02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FADBC152317DC8F0072FE02 /* GoogleService-Info.plist */; };
 		7FADBC192317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC182317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift */; };
+		7FAF2394232BF30500D2CD5F /* contentViewHeader@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF2393232BF30500D2CD5F /* contentViewHeader@3x.png */; };
+		7FAF2396232BF3EA00D2CD5F /* 0_jpeg-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */; };
+		7FAF239A232BFFA300D2CD5F /* GreenTick@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */; };
+		7FAF239C232C033900D2CD5F /* BestBitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF239B232C033900D2CD5F /* BestBitsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +42,22 @@
 		7F29869F230FF56C00B87B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F2986A2230FF56C00B87B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F2986A4230FF56C00B87B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F31D89A232AED7C00923AC2 /* BarCalloutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCalloutViewController.swift; sourceTree = "<group>"; };
+		7F31D89B232AED7C00923AC2 /* BarCalloutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCalloutViewController.xib; sourceTree = "<group>"; };
+		7F46C9EA232BA155005B5420 /* buttonWelcome@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonWelcome@3x.png"; sourceTree = "<group>"; };
+		7F46C9EB232BA158005B5420 /* btn black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn black.png"; sourceTree = "<group>"; };
+		7F46C9EC232BA15C005B5420 /* btn blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn blue@3x.png"; sourceTree = "<group>"; };
+		7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarDetailView.storyboard; sourceTree = "<group>"; };
+		7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDetailViewController.swift; sourceTree = "<group>"; };
 		7FADBC0F231037930072FE02 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FADBC112317C2000072FE02 /* BarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnnotation.swift; sourceTree = "<group>"; };
 		7FADBC132317D8170072FE02 /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
 		7FADBC152317DC8F0072FE02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7FADBC182317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
+		7FAF2393232BF30500D2CD5F /* contentViewHeader@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contentViewHeader@3x.png"; sourceTree = "<group>"; };
+		7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0_jpeg-125.jpg"; sourceTree = "<group>"; };
+		7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenTick@3x.png"; sourceTree = "<group>"; };
+		7FAF239B232C033900D2CD5F /* BestBitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBitsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +102,13 @@
 		7F298697230FF56800B87B11 /* BestBar */ = {
 			isa = PBXGroup;
 			children = (
+				7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */,
+				7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */,
+				7FAF2393232BF30500D2CD5F /* contentViewHeader@3x.png */,
+				7F46C9F5232BF17D005B5420 /* Assets */,
+				7F46C9EB232BA158005B5420 /* btn black.png */,
+				7F46C9EC232BA15C005B5420 /* btn blue@3x.png */,
+				7F46C9EA232BA155005B5420 /* buttonWelcome@3x.png */,
 				7FADBC172317E3510072FE02 /* Extensions */,
 				7F298698230FF56800B87B11 /* AppDelegate.swift */,
 				7F29869A230FF56800B87B11 /* ViewController.swift */,
@@ -91,8 +120,20 @@
 				7FADBC112317C2000072FE02 /* BarAnnotation.swift */,
 				7FADBC132317D8170072FE02 /* FirebaseClient.swift */,
 				7FADBC152317DC8F0072FE02 /* GoogleService-Info.plist */,
+				7F31D89A232AED7C00923AC2 /* BarCalloutViewController.swift */,
+				7F31D89B232AED7C00923AC2 /* BarCalloutViewController.xib */,
+				7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */,
+				7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */,
+				7FAF239B232C033900D2CD5F /* BestBitsCell.swift */,
 			);
 			path = BestBar;
+			sourceTree = "<group>";
+		};
+		7F46C9F5232BF17D005B5420 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		7FADBC172317E3510072FE02 /* Extensions */ = {
@@ -171,10 +212,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F46C9EE232BA15C005B5420 /* btn black.png in Resources */,
 				7F2986A3230FF56C00B87B11 /* LaunchScreen.storyboard in Resources */,
+				7F46C9EF232BA15C005B5420 /* btn blue@3x.png in Resources */,
+				7F46C9ED232BA15C005B5420 /* buttonWelcome@3x.png in Resources */,
 				7FADBC162317DC8F0072FE02 /* GoogleService-Info.plist in Resources */,
+				7FAF2394232BF30500D2CD5F /* contentViewHeader@3x.png in Resources */,
 				7F2986A0230FF56C00B87B11 /* Assets.xcassets in Resources */,
 				7F29869E230FF56800B87B11 /* Main.storyboard in Resources */,
+				7F31D89D232AED7C00923AC2 /* BarCalloutViewController.xib in Resources */,
+				7FAF2396232BF3EA00D2CD5F /* 0_jpeg-125.jpg in Resources */,
+				7FAF239A232BFFA300D2CD5F /* GreenTick@3x.png in Resources */,
+				7F46C9F1232BA92F005B5420 /* BarDetailView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +298,10 @@
 				7FADBC10231037930072FE02 /* MapViewController.swift in Sources */,
 				7FADBC142317D8170072FE02 /* FirebaseClient.swift in Sources */,
 				7FADBC122317C2000072FE02 /* BarAnnotation.swift in Sources */,
+				7F31D89C232AED7C00923AC2 /* BarCalloutViewController.swift in Sources */,
 				7F298699230FF56800B87B11 /* AppDelegate.swift in Sources */,
+				7F46C9F3232BE7B7005B5420 /* BarDetailViewController.swift in Sources */,
+				7FAF239C232C033900D2CD5F /* BestBitsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
