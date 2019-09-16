@@ -29,6 +29,7 @@
 		7FAF2396232BF3EA00D2CD5F /* 0_jpeg-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */; };
 		7FAF239A232BFFA300D2CD5F /* GreenTick@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */; };
 		7FAF239C232C033900D2CD5F /* BestBitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF239B232C033900D2CD5F /* BestBitsCell.swift */; };
+		7FFC20352330119B00D2DF21 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC20342330119B00D2DF21 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0_jpeg-125.jpg"; sourceTree = "<group>"; };
 		7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenTick@3x.png"; sourceTree = "<group>"; };
 		7FAF239B232C033900D2CD5F /* BestBitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBitsCell.swift; sourceTree = "<group>"; };
+		7FFC20342330119B00D2DF21 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */,
 				7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */,
 				7FAF239B232C033900D2CD5F /* BestBitsCell.swift */,
+				7FFC20342330119B00D2DF21 /* PhotosViewController.swift */,
 			);
 			path = BestBar;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				7F298699230FF56800B87B11 /* AppDelegate.swift in Sources */,
 				7F46C9F3232BE7B7005B5420 /* BarDetailViewController.swift in Sources */,
 				7FAF239C232C033900D2CD5F /* BestBitsCell.swift in Sources */,
+				7FFC20352330119B00D2DF21 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
