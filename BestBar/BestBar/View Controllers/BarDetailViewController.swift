@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BarDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -15,9 +16,17 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var bestBitsCollectionView: UICollectionView!
     
-    var bestBitsArray = ["Rooftop Bar", "Dog Friendly", "Beer Garden", "Lots of Gin"]
+    //var bestBitsArray = ["Rooftop Bar", "Dog Friendly", "Beer Garden", "Lots of Gin"]
+    var bestBitsArray: [String] = []
     var barTitle: String = ""
     var barSubtitle: String = ""
+    var barID: String!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        bestBitsArray = []
+        fetchBestBits()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +36,21 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
         //contentViewHeader.layer.cornerRadius = 16
         bestBitsCollectionView.delegate = self
         bestBitsCollectionView.dataSource = self
+    }
+    
+    func fetchBestBits() {
+        let db = Firestore.firestore()
+        let dbCall = "belfast/\(barID!)"
+        
+        db.document(dbCall).getDocument() { (documentSnapshot, err) in
+            guard let document = documentSnapshot?.data() else {
+                print("Error retrieving reviews: \(err!)")
+                return
+            }
+            
+            self.bestBitsArray = document["bestBits"] as! [String]
+            self.bestBitsCollectionView.reloadData()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,6 +78,19 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
         flowLayout.minimumLineSpacing = 0
         
         return CGSize(width: size, height: size/2)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        var containerViewController: ReviewsViewController?
+//        if let vc = segue.destination as? ReviewsViewController {
+//            vc.barID = self.barID
+//        }
+        
+        if segue.identifier == "Reviews" {
+            containerViewController = segue.destination as? ReviewsViewController
+            containerViewController?.barID = barID!
+        }
     }
     
 

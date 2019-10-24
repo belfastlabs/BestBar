@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,10 @@
 		7F46C9EF232BA15C005B5420 /* btn blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F46C9EC232BA15C005B5420 /* btn blue@3x.png */; };
 		7F46C9F1232BA92F005B5420 /* BarDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */; };
 		7F46C9F3232BE7B7005B5420 /* BarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */; };
+		7F72DEA0235E1A2700C71FEC /* DSC_6208-insta-683x1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F72DE9F235E1A2700C71FEC /* DSC_6208-insta-683x1024.jpg */; };
+		7F72DEA2235E1A2C00C71FEC /* 745A1321-683x1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F72DEA1235E1A2C00C71FEC /* 745A1321-683x1024.jpg */; };
+		7F72DEA4235E1A4B00C71FEC /* DSC0242-684x1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F72DEA3235E1A4B00C71FEC /* DSC0242-684x1024.jpg */; };
+		7F72DEA6235E1BD000C71FEC /* BarPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72DEA5235E1BD000C71FEC /* BarPhotoCell.swift */; };
 		7FADBC10231037930072FE02 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC0F231037930072FE02 /* MapViewController.swift */; };
 		7FADBC122317C2000072FE02 /* BarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC112317C2000072FE02 /* BarAnnotation.swift */; };
 		7FADBC142317D8170072FE02 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADBC132317D8170072FE02 /* FirebaseClient.swift */; };
@@ -29,6 +33,9 @@
 		7FAF2396232BF3EA00D2CD5F /* 0_jpeg-125.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */; };
 		7FAF239A232BFFA300D2CD5F /* GreenTick@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */; };
 		7FAF239C232C033900D2CD5F /* BestBitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAF239B232C033900D2CD5F /* BestBitsCell.swift */; };
+		7FCE17802360DD1100821964 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCE177F2360DD1100821964 /* ReviewCell.swift */; };
+		7FDB954223617B7000D0FE46 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDB954123617B7000D0FE46 /* ReviewsViewController.swift */; };
+		7FDB954523617F2D00D0FE46 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDB954423617F2D00D0FE46 /* Review.swift */; };
 		7FFC20352330119B00D2DF21 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC20342330119B00D2DF21 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +57,10 @@
 		7F46C9EC232BA15C005B5420 /* btn blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn blue@3x.png"; sourceTree = "<group>"; };
 		7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarDetailView.storyboard; sourceTree = "<group>"; };
 		7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDetailViewController.swift; sourceTree = "<group>"; };
+		7F72DE9F235E1A2700C71FEC /* DSC_6208-insta-683x1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "DSC_6208-insta-683x1024.jpg"; path = "../../../../../Downloads/DSC_6208-insta-683x1024.jpg"; sourceTree = "<group>"; };
+		7F72DEA1235E1A2C00C71FEC /* 745A1321-683x1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "745A1321-683x1024.jpg"; path = "../../../../../Downloads/745A1321-683x1024.jpg"; sourceTree = "<group>"; };
+		7F72DEA3235E1A4B00C71FEC /* DSC0242-684x1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "DSC0242-684x1024.jpg"; path = "../../../../../Downloads/DSC0242-684x1024.jpg"; sourceTree = "<group>"; };
+		7F72DEA5235E1BD000C71FEC /* BarPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarPhotoCell.swift; sourceTree = "<group>"; };
 		7FADBC0F231037930072FE02 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7FADBC112317C2000072FE02 /* BarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnnotation.swift; sourceTree = "<group>"; };
 		7FADBC132317D8170072FE02 /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
@@ -59,6 +70,9 @@
 		7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0_jpeg-125.jpg"; sourceTree = "<group>"; };
 		7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenTick@3x.png"; sourceTree = "<group>"; };
 		7FAF239B232C033900D2CD5F /* BestBitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBitsCell.swift; sourceTree = "<group>"; };
+		7FCE177F2360DD1100821964 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		7FDB954123617B7000D0FE46 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		7FDB954423617F2D00D0FE46 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		7FFC20342330119B00D2DF21 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,30 +118,18 @@
 		7F298697230FF56800B87B11 /* BestBar */ = {
 			isa = PBXGroup;
 			children = (
-				7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */,
-				7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */,
-				7FAF2393232BF30500D2CD5F /* contentViewHeader@3x.png */,
+				7FDB954323617F1B00D0FE46 /* Models */,
+				7F72DE9E235E159B00C71FEC /* Annotations */,
+				7F72DE9D235E159200C71FEC /* Clients */,
+				7F72DE9C235E158400C71FEC /* Cells */,
+				7F72DE9B235E157100C71FEC /* View Controllers */,
+				7F72DE9A235E156000C71FEC /* Views */,
 				7F46C9F5232BF17D005B5420 /* Assets */,
-				7F46C9EB232BA158005B5420 /* btn black.png */,
-				7F46C9EC232BA15C005B5420 /* btn blue@3x.png */,
-				7F46C9EA232BA155005B5420 /* buttonWelcome@3x.png */,
 				7FADBC172317E3510072FE02 /* Extensions */,
 				7F298698230FF56800B87B11 /* AppDelegate.swift */,
-				7F29869A230FF56800B87B11 /* ViewController.swift */,
-				7F29869C230FF56800B87B11 /* Main.storyboard */,
 				7F29869F230FF56C00B87B11 /* Assets.xcassets */,
-				7F2986A1230FF56C00B87B11 /* LaunchScreen.storyboard */,
 				7F2986A4230FF56C00B87B11 /* Info.plist */,
-				7FADBC0F231037930072FE02 /* MapViewController.swift */,
-				7FADBC112317C2000072FE02 /* BarAnnotation.swift */,
-				7FADBC132317D8170072FE02 /* FirebaseClient.swift */,
 				7FADBC152317DC8F0072FE02 /* GoogleService-Info.plist */,
-				7F31D89A232AED7C00923AC2 /* BarCalloutViewController.swift */,
-				7F31D89B232AED7C00923AC2 /* BarCalloutViewController.xib */,
-				7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */,
-				7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */,
-				7FAF239B232C033900D2CD5F /* BestBitsCell.swift */,
-				7FFC20342330119B00D2DF21 /* PhotosViewController.swift */,
 			);
 			path = BestBar;
 			sourceTree = "<group>";
@@ -135,8 +137,67 @@
 		7F46C9F5232BF17D005B5420 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7F72DEA3235E1A4B00C71FEC /* DSC0242-684x1024.jpg */,
+				7F72DEA1235E1A2C00C71FEC /* 745A1321-683x1024.jpg */,
+				7F72DE9F235E1A2700C71FEC /* DSC_6208-insta-683x1024.jpg */,
+				7FAF2399232BFFA300D2CD5F /* GreenTick@3x.png */,
+				7FAF2395232BF3EA00D2CD5F /* 0_jpeg-125.jpg */,
+				7FAF2393232BF30500D2CD5F /* contentViewHeader@3x.png */,
+				7F46C9EB232BA158005B5420 /* btn black.png */,
+				7F46C9EC232BA15C005B5420 /* btn blue@3x.png */,
+				7F46C9EA232BA155005B5420 /* buttonWelcome@3x.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		7F72DE9A235E156000C71FEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F29869C230FF56800B87B11 /* Main.storyboard */,
+				7F2986A1230FF56C00B87B11 /* LaunchScreen.storyboard */,
+				7F31D89B232AED7C00923AC2 /* BarCalloutViewController.xib */,
+				7F46C9F0232BA92F005B5420 /* BarDetailView.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F72DE9B235E157100C71FEC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F29869A230FF56800B87B11 /* ViewController.swift */,
+				7FADBC0F231037930072FE02 /* MapViewController.swift */,
+				7F31D89A232AED7C00923AC2 /* BarCalloutViewController.swift */,
+				7F46C9F2232BE7B7005B5420 /* BarDetailViewController.swift */,
+				7FFC20342330119B00D2DF21 /* PhotosViewController.swift */,
+				7FDB954123617B7000D0FE46 /* ReviewsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7F72DE9C235E158400C71FEC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7FAF239B232C033900D2CD5F /* BestBitsCell.swift */,
+				7F72DEA5235E1BD000C71FEC /* BarPhotoCell.swift */,
+				7FCE177F2360DD1100821964 /* ReviewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7F72DE9D235E159200C71FEC /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				7FADBC132317D8170072FE02 /* FirebaseClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		7F72DE9E235E159B00C71FEC /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				7FADBC112317C2000072FE02 /* BarAnnotation.swift */,
+			);
+			path = Annotations;
 			sourceTree = "<group>";
 		};
 		7FADBC172317E3510072FE02 /* Extensions */ = {
@@ -145,6 +206,14 @@
 				7FADBC182317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7FDB954323617F1B00D0FE46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FDB954423617F2D00D0FE46 /* Review.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B3B2CB41F9888D20FC15F29E /* Frameworks */ = {
@@ -218,13 +287,16 @@
 				7F46C9EE232BA15C005B5420 /* btn black.png in Resources */,
 				7F2986A3230FF56C00B87B11 /* LaunchScreen.storyboard in Resources */,
 				7F46C9EF232BA15C005B5420 /* btn blue@3x.png in Resources */,
+				7F72DEA2235E1A2C00C71FEC /* 745A1321-683x1024.jpg in Resources */,
 				7F46C9ED232BA15C005B5420 /* buttonWelcome@3x.png in Resources */,
 				7FADBC162317DC8F0072FE02 /* GoogleService-Info.plist in Resources */,
 				7FAF2394232BF30500D2CD5F /* contentViewHeader@3x.png in Resources */,
 				7F2986A0230FF56C00B87B11 /* Assets.xcassets in Resources */,
 				7F29869E230FF56800B87B11 /* Main.storyboard in Resources */,
+				7F72DEA0235E1A2700C71FEC /* DSC_6208-insta-683x1024.jpg in Resources */,
 				7F31D89D232AED7C00923AC2 /* BarCalloutViewController.xib in Resources */,
 				7FAF2396232BF3EA00D2CD5F /* 0_jpeg-125.jpg in Resources */,
+				7F72DEA4235E1A4B00C71FEC /* DSC0242-684x1024.jpg in Resources */,
 				7FAF239A232BFFA300D2CD5F /* GreenTick@3x.png in Resources */,
 				7F46C9F1232BA92F005B5420 /* BarDetailView.storyboard in Resources */,
 			);
@@ -239,28 +311,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BestBar/Pods-BestBar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BestBar/Pods-BestBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BestBar/Pods-BestBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -297,12 +352,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FADBC192317E3A60072FE02 /* CLLocationCoordinate2D+Extension.swift in Sources */,
+				7FCE17802360DD1100821964 /* ReviewCell.swift in Sources */,
 				7F29869B230FF56800B87B11 /* ViewController.swift in Sources */,
 				7FADBC10231037930072FE02 /* MapViewController.swift in Sources */,
 				7FADBC142317D8170072FE02 /* FirebaseClient.swift in Sources */,
 				7FADBC122317C2000072FE02 /* BarAnnotation.swift in Sources */,
 				7F31D89C232AED7C00923AC2 /* BarCalloutViewController.swift in Sources */,
+				7F72DEA6235E1BD000C71FEC /* BarPhotoCell.swift in Sources */,
+				7FDB954223617B7000D0FE46 /* ReviewsViewController.swift in Sources */,
 				7F298699230FF56800B87B11 /* AppDelegate.swift in Sources */,
+				7FDB954523617F2D00D0FE46 /* Review.swift in Sources */,
 				7F46C9F3232BE7B7005B5420 /* BarDetailViewController.swift in Sources */,
 				7FAF239C232C033900D2CD5F /* BestBitsCell.swift in Sources */,
 				7FFC20352330119B00D2DF21 /* PhotosViewController.swift in Sources */,

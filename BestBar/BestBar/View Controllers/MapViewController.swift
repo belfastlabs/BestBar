@@ -115,6 +115,32 @@ extension MapViewController: MKMapViewDelegate {
         let vc = UIStoryboard(name: "BarDetailView", bundle: nil).instantiateViewController(withIdentifier: "BarDetailViewController") as! BarDetailViewController
         vc.barTitle = ((view.annotation?.title)!)!
         vc.barSubtitle = ((view.annotation?.subtitle)!)!
+        
+        var barIDString: String!
+        switch ((view.annotation?.title)!)! {
+        case "The Thirsty Goat":
+            barIDString = "thirsty-goat"
+            vc.barID = barIDString!
+        case "The Spaniard":
+            barIDString = "spaniard"
+            vc.barID = barIDString!
+        case "The National":
+            barIDString = "national"
+            vc.barID = barIDString!
+        case "The Merchant Hotel":
+            barIDString = "merchant"
+            vc.barID = barIDString!
+        case "Dirty Onion":
+            barIDString = "dirty-onion"
+            vc.barID = barIDString!
+        case "The Cloth Ear":
+            barIDString = "cloth-ear"
+            vc.barID = barIDString!
+        default:
+            barIDString = "thirsty-goat"
+            vc.barID = barIDString!
+        }
+        
         self.present(vc, animated: true, completion: nil)
     }
 }

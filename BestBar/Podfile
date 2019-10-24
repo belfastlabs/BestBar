@@ -8,4 +8,5 @@ target 'BestBar' do
   # Pods for BestBar
   pod 'Firebase'
   pod 'Firebase/Firestore'
+  pod 'Cosmos', '~> 20.0'
 end
