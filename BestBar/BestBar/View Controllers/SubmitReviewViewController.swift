@@ -24,7 +24,7 @@ class SubmitReviewViewController: UIViewController {
         super.viewDidLoad()
         addBackgroundBlur()
         confView.layer.cornerRadius = 12
-        nameTextVIew.layer.cornerRadius = 12
+        nameTextVIew.layer.cornerRadius = 8
         mainCommentTextView.layer.cornerRadius = 12
         reviewTextView.layer.cornerRadius = 12
         // Do any additional setup after loading the view.
