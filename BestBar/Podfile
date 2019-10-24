@@ -11,4 +11,5 @@ target 'BestBar' do
   pod 'Cosmos', '~> 20.0'
   pod 'Nuke', '~> 8.0'
   pod 'SKPhotoBrowser'
+  pod 'lottie-ios'
 end

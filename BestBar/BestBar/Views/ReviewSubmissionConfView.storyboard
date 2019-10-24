@@ -88,6 +88,17 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-eS-3nc">
+                                        <rect key="frame" x="25" y="463" width="312" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Dismiss" backgroundImage="buttonWelcome.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="xV0-X4-vzV" eventType="touchUpInside" id="31l-Va-Kco"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPJ-50-u2N">
                                         <rect key="frame" x="25" y="463" width="312" height="47"/>
                                         <constraints>
@@ -101,10 +112,15 @@
                                             <action selector="submitReview:" destination="xV0-X4-vzV" eventType="touchUpInside" id="8IS-2q-Cfl"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hy4-kH-mUc" customClass="AnimationView" customModule="Lottie">
+                                        <rect key="frame" x="61" y="118" width="239" height="206"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="CPs-Rc-OJT" firstAttribute="top" secondItem="gob-gp-deH" secondAttribute="bottom" constant="17" id="0MA-9k-Dyp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hy4-kH-mUc" secondAttribute="trailing" constant="61" id="4Fw-lH-3be"/>
                                     <constraint firstItem="3cp-pi-o5X" firstAttribute="top" secondItem="7KT-gc-QBM" secondAttribute="bottom" constant="20" id="4K4-l2-jot"/>
                                     <constraint firstItem="y3X-qF-kFL" firstAttribute="centerX" secondItem="7KT-gc-QBM" secondAttribute="centerX" id="BzV-Gy-INn"/>
                                     <constraint firstItem="YPJ-50-u2N" firstAttribute="trailing" secondItem="gob-gp-deH" secondAttribute="trailing" constant="2" id="DxI-zA-T1T"/>
@@ -115,6 +131,7 @@
                                     <constraint firstItem="532-jX-dLR" firstAttribute="centerX" secondItem="gob-gp-deH" secondAttribute="centerX" id="IfS-4m-Fnt"/>
                                     <constraint firstItem="532-jX-dLR" firstAttribute="leading" secondItem="IYN-lt-mIo" secondAttribute="leading" constant="108" id="KYV-43-l3K"/>
                                     <constraint firstAttribute="bottom" secondItem="CPs-Rc-OJT" secondAttribute="bottom" constant="155" id="LcB-en-gel"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hy4-kH-mUc" secondAttribute="bottom" constant="218" id="N9T-Sj-Pqo"/>
                                     <constraint firstItem="3cp-pi-o5X" firstAttribute="centerX" secondItem="YPJ-50-u2N" secondAttribute="centerX" constant="-1" id="Q5b-BA-dKa"/>
                                     <constraint firstItem="GAn-bd-Zyo" firstAttribute="leading" secondItem="IYN-lt-mIo" secondAttribute="leading" constant="86" id="Rdu-bJ-QPb"/>
                                     <constraint firstItem="YPJ-50-u2N" firstAttribute="leading" secondItem="7KT-gc-QBM" secondAttribute="leading" id="Rhm-yc-hfc"/>
@@ -123,11 +140,13 @@
                                     <constraint firstItem="y3X-qF-kFL" firstAttribute="leading" secondItem="IYN-lt-mIo" secondAttribute="leading" constant="60" id="XLQ-iv-ISL"/>
                                     <constraint firstItem="3cp-pi-o5X" firstAttribute="top" secondItem="IYN-lt-mIo" secondAttribute="top" constant="238" id="Zem-5d-Q9b"/>
                                     <constraint firstAttribute="trailing" secondItem="y3X-qF-kFL" secondAttribute="trailing" constant="61" id="Zmx-9L-sha"/>
+                                    <constraint firstItem="Hy4-kH-mUc" firstAttribute="top" secondItem="IYN-lt-mIo" secondAttribute="top" constant="118" id="aSp-Rm-fX1"/>
                                     <constraint firstItem="3cp-pi-o5X" firstAttribute="centerX" secondItem="7KT-gc-QBM" secondAttribute="centerX" id="dqS-9V-6NX"/>
                                     <constraint firstItem="532-jX-dLR" firstAttribute="centerX" secondItem="7KT-gc-QBM" secondAttribute="centerX" id="eOq-c9-EXp"/>
                                     <constraint firstItem="7KT-gc-QBM" firstAttribute="top" secondItem="532-jX-dLR" secondAttribute="bottom" constant="8" id="gZj-ad-19w"/>
                                     <constraint firstItem="CPs-Rc-OJT" firstAttribute="centerX" secondItem="7KT-gc-QBM" secondAttribute="centerX" id="gqp-I5-CQb"/>
                                     <constraint firstItem="GAn-bd-Zyo" firstAttribute="top" secondItem="CPs-Rc-OJT" secondAttribute="bottom" constant="8" id="gzb-lt-QAv"/>
+                                    <constraint firstItem="Hy4-kH-mUc" firstAttribute="leading" secondItem="IYN-lt-mIo" secondAttribute="leading" constant="61" id="hAd-qF-R01"/>
                                     <constraint firstItem="y3X-qF-kFL" firstAttribute="centerX" secondItem="gob-gp-deH" secondAttribute="centerX" id="lkQ-u7-V2w"/>
                                     <constraint firstItem="532-jX-dLR" firstAttribute="centerX" secondItem="CPs-Rc-OJT" secondAttribute="centerX" id="rgP-0f-IJM"/>
                                     <constraint firstItem="hiL-EZ-khr" firstAttribute="leading" secondItem="IYN-lt-mIo" secondAttribute="leading" constant="108" id="t1P-Wj-vTT"/>
@@ -150,11 +169,18 @@
                         <viewLayoutGuide key="safeArea" id="Aib-tx-IBG"/>
                     </view>
                     <connections>
+                        <outlet property="animationView" destination="Hy4-kH-mUc" id="5se-3M-gpf"/>
                         <outlet property="confView" destination="IYN-lt-mIo" id="Hx4-kd-7s1"/>
+                        <outlet property="dismissButton" destination="Rj6-eS-3nc" id="caF-cH-Lqi"/>
+                        <outlet property="mainCommentHeading" destination="532-jX-dLR" id="WnQ-5q-cOQ"/>
                         <outlet property="mainCommentTextView" destination="7KT-gc-QBM" id="IUw-9i-3Yp"/>
+                        <outlet property="nameHeading" destination="hiL-EZ-khr" id="bvw-Ru-JCv"/>
                         <outlet property="nameTextVIew" destination="y3X-qF-kFL" id="faF-pY-Zil"/>
+                        <outlet property="ratingHeading" destination="CPs-Rc-OJT" id="5Vq-2p-1PL"/>
                         <outlet property="ratingView" destination="GAn-bd-Zyo" id="1mK-Ff-yKr"/>
+                        <outlet property="reviewHeading" destination="3cp-pi-o5X" id="fmB-3D-hUi"/>
                         <outlet property="reviewTextView" destination="gob-gp-deH" id="2LX-dr-1aM"/>
+                        <outlet property="submitButton" destination="YPJ-50-u2N" id="Zpi-ue-M6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3km-X8-qmJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,5 +190,6 @@
     </scenes>
     <resources>
         <image name="btn blue.png" width="327" height="52"/>
+        <image name="buttonWelcome.png" width="327" height="52"/>
     </resources>
 </document>

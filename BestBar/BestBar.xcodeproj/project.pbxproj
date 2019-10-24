@@ -39,6 +39,7 @@
 		7FDB95472361E19700D0FE46 /* ReviewSubmissionConfView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDB95462361E19700D0FE46 /* ReviewSubmissionConfView.storyboard */; };
 		7FDB95492361E60400D0FE46 /* SubmitReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDB95482361E60400D0FE46 /* SubmitReviewViewController.swift */; };
 		7FDB954B2361F2BE00D0FE46 /* My Post-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDB954A2361F2BE00D0FE46 /* My Post-2.png */; };
+		7FDB954D2361F49A00D0FE46 /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FDB954C2361F49A00D0FE46 /* 782-check-mark-success.json */; };
 		7FFC20352330119B00D2DF21 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC20342330119B00D2DF21 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		7FDB95462361E19700D0FE46 /* ReviewSubmissionConfView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewSubmissionConfView.storyboard; sourceTree = "<group>"; };
 		7FDB95482361E60400D0FE46 /* SubmitReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitReviewViewController.swift; sourceTree = "<group>"; };
 		7FDB954A2361F2BE00D0FE46 /* My Post-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "My Post-2.png"; path = "../../../../../Downloads/My Post-2.png"; sourceTree = "<group>"; };
+		7FDB954C2361F49A00D0FE46 /* 782-check-mark-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "782-check-mark-success.json"; path = "../../../../GoOrder-Customer/GoOrder-Customer/Lottie/782-check-mark-success.json"; sourceTree = "<group>"; };
 		7FFC20342330119B00D2DF21 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 		7F46C9F5232BF17D005B5420 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7FDB954C2361F49A00D0FE46 /* 782-check-mark-success.json */,
 				7FDB954A2361F2BE00D0FE46 /* My Post-2.png */,
 				7F72DEA3235E1A4B00C71FEC /* DSC0242-684x1024.jpg */,
 				7F72DEA1235E1A2C00C71FEC /* 745A1321-683x1024.jpg */,
@@ -308,6 +311,7 @@
 				7F31D89D232AED7C00923AC2 /* BarCalloutViewController.xib in Resources */,
 				7FAF2396232BF3EA00D2CD5F /* 0_jpeg-125.jpg in Resources */,
 				7F72DEA4235E1A4B00C71FEC /* DSC0242-684x1024.jpg in Resources */,
+				7FDB954D2361F49A00D0FE46 /* 782-check-mark-success.json in Resources */,
 				7FAF239A232BFFA300D2CD5F /* GreenTick@3x.png in Resources */,
 				7F46C9F1232BA92F005B5420 /* BarDetailView.storyboard in Resources */,
 			);

@@ -9,20 +9,37 @@
 import UIKit
 import Firebase
 import Cosmos
+import Lottie
 
 class SubmitReviewViewController: UIViewController {
 
+    @IBOutlet weak var nameHeading: UILabel!
     @IBOutlet weak var nameTextVIew: UITextView!
+    
+    @IBOutlet weak var mainCommentHeading: UILabel!
     @IBOutlet weak var mainCommentTextView: UITextView!
+    
+    @IBOutlet weak var reviewHeading: UILabel!
     @IBOutlet weak var reviewTextView: UITextView!
+    
+    
+    @IBOutlet weak var ratingHeading: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
+    
     @IBOutlet weak var confView: UIView!
+    
+    @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var animationView: AnimationView!
+    
+    @IBOutlet weak var submitButton: UIButton!
     
     var barID: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addBackgroundBlur()
+        animationView.isHidden = true
+        dismissButton.isHidden = true
         confView.layer.cornerRadius = 12
         nameTextVIew.layer.cornerRadius = 8
         mainCommentTextView.layer.cornerRadius = 12
@@ -33,6 +50,10 @@ class SubmitReviewViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
+    }
+    
+    @IBAction func dismissButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func submitReview(_ sender: Any) {
@@ -55,7 +76,7 @@ class SubmitReviewViewController: UIViewController {
                     print("Error adding document: \(err)")
                 } else {
                     print("Document added with ID: \(ref!.documentID)")
-                    self.dismiss(animated: true, completion: nil)
+                    self.startAnimating()
                 }
             }
         }
@@ -66,6 +87,35 @@ class SubmitReviewViewController: UIViewController {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.view.bounds
         self.view.insertSubview(blurEffectView, at: 0)
+    }
+    
+    func startAnimating() {
+        
+        nameTextVIew.isHidden = true
+        nameHeading.isHidden = true
+        mainCommentTextView.isHidden = true
+        mainCommentHeading.isHidden = true
+        reviewTextView.isHidden = true
+        reviewHeading.isHidden = true
+        ratingView.isHidden = true
+        ratingHeading.isHidden = true
+        submitButton.isHidden = true
+        
+        
+        animationView.isHidden = false
+        dismissButton.isHidden = false
+        let animation = Animation.named("782-check-mark-success")
+        animationView.animation = animation
+        animationView.play(fromProgress: 0,
+                           toProgress: 1,
+                           loopMode: LottieLoopMode.playOnce,
+                           completion: { (finished) in
+                            if finished {
+                                print("Animation Complete")
+                            } else {
+                                print("Animation cancelled")
+                            }
+        })
     }
     
     /*
