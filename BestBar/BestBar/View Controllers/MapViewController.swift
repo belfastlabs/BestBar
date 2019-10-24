@@ -31,7 +31,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
         }
         
-        centerMapOnLocation(location: initialLocation)
+        if let coor = mapView.userLocation.location?.coordinate{
+            let region = MKCoordinateRegion(center: coor, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            mapView.setRegion(region, animated: true)
+        }
+        //centerMapOnLocation(location: initialLocation)
         fetchBarLocations()
     }
     
