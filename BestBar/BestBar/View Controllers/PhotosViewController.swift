@@ -20,6 +20,8 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
     var barID: String!
     var images = [SKPhoto]()
     
+    private var listener: ListenerRegistration?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         fetchPhotos()

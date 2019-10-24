@@ -19,6 +19,7 @@ class ReviewsViewController: UIViewController, UICollectionViewDelegate, UIColle
     private var listener: ListenerRegistration?
     
     override func viewWillAppear(_ animated: Bool) {
+        listener?.remove()
         fetchReviews()
     }
     
@@ -29,12 +30,16 @@ class ReviewsViewController: UIViewController, UICollectionViewDelegate, UIColle
         reviewsCollectionView.reloadData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        listener?.remove()
+    }
+    
     func fetchReviews() {
         let dbCall = "belfast/\(barID!)/reviews"
         let db = Firestore.firestore()
         print("DBCALL: \(dbCall)")
         
-        db.collection(dbCall).addSnapshotListener() { (querySnapshot, err) in
+        listener = db.collection(dbCall).addSnapshotListener() { (querySnapshot, err) in
             guard let documents = querySnapshot?.documents else {
                 print("Error retrieving reviews: \(err!)")
                 return
@@ -64,6 +69,7 @@ class ReviewsViewController: UIViewController, UICollectionViewDelegate, UIColle
         cell.rating.rating = ReviewList.reviewList[indexPath.row].rating
         cell.reviewHeadingLabel.text = ReviewList.reviewList[indexPath.row].heading
         cell.reviewText.text = ReviewList.reviewList[indexPath.row].review
+        cell.nameLabel.text = ReviewList.reviewList[indexPath.row].name
         
         return cell
     }

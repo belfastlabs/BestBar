@@ -14,4 +14,5 @@ class ReviewCell: UICollectionViewCell {
     @IBOutlet weak var reviewHeadingLabel: UILabel!
     @IBOutlet weak var rating: CosmosView!
     @IBOutlet weak var reviewText: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
 }

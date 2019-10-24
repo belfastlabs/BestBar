@@ -62,6 +62,17 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
         }
     }
     
+    
+    
+    @IBAction func addReview(_ sender: Any) {
+        let submitReviewVC = UIStoryboard(name: "ReviewSubmissionConfView", bundle: nil).instantiateViewController(withIdentifier: "SubmitReview") as! SubmitReviewViewController
+        submitReviewVC.modalTransitionStyle = .crossDissolve
+        submitReviewVC.barID = barID
+        self.present(submitReviewVC, animated: true, completion: nil)
+    }
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bestBitsArray.count
     }
