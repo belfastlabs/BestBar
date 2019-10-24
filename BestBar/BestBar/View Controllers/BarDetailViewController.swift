@@ -56,6 +56,7 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
                 self.headerImageURL = document["headerImageURL"] as? String
                 self.bestBitsArray = document["bestBits"] as! [String]
                 self.bestBitsCollectionView.reloadData()
+                
                 Nuke.loadImage(with: URL(string: self.headerImageURL)!, into: self.headerImageView)
             }
         }

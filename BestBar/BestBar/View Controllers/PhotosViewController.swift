@@ -9,13 +9,16 @@
 import UIKit
 import Nuke
 import Firebase
+import SKPhotoBrowser
 
 class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var photosCollectionView: UICollectionView!
 
     var imageCollectionURLs: [String] = []
+    var retrievedImages: [UIImage] = []
     var barID: String!
+    var images = [SKPhoto]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -74,10 +77,29 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BarPhotoCell", for: indexPath) as! BarPhotoCell
-        Nuke.loadImage(with: URL(string: imageCollectionURLs[indexPath.row])!, into: cell.photoView)
+        
+        let options = ImageLoadingOptions(contentModes: .init(success: .scaleAspectFill, failure: .center, placeholder: .center))
+        
+        Nuke.loadImage(with: URL(string: imageCollectionURLs[indexPath.row])!, options: options, into: cell.photoView)
         cell.layer.cornerRadius = 12
         
+        let photo = SKPhoto.photoWithImageURL(imageCollectionURLs[indexPath.row])
+        photo.shouldCachePhotoURLImage = false // you can use image cache by true(NSCache)
+        images.append(photo)
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! BarPhotoCell
+        let originImage = cell.photoView.image // some image for baseImage
+
+        let browser = SKPhotoBrowser(originImage: originImage ?? UIImage(), photos: images, animatedFromView: cell)
+        
+        SKPhotoBrowserOptions.bounceAnimation = true
+        
+        browser.initializePageIndex(indexPath.row)
+        present(browser, animated: true, completion: {})
     }
 
 }
