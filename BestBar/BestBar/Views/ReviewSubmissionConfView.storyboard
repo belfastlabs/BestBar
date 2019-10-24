@@ -26,10 +26,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y3X-qF-kFL">
-                                        <rect key="frame" x="60" y="56" width="240" height="27"/>
+                                        <rect key="frame" x="60" y="56" width="240" height="35"/>
                                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="27" id="ZU8-3F-Czz"/>
+                                            <constraint firstAttribute="height" constant="35" id="ZU8-3F-Czz"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,7 +58,7 @@
                                         <rect key="frame" x="25" y="270" width="310" height="76"/>
                                         <color key="backgroundColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPs-Rc-OJT">
@@ -124,7 +124,7 @@
                                     <constraint firstItem="3cp-pi-o5X" firstAttribute="top" secondItem="7KT-gc-QBM" secondAttribute="bottom" constant="20" id="4K4-l2-jot"/>
                                     <constraint firstItem="y3X-qF-kFL" firstAttribute="centerX" secondItem="7KT-gc-QBM" secondAttribute="centerX" id="BzV-Gy-INn"/>
                                     <constraint firstItem="YPJ-50-u2N" firstAttribute="trailing" secondItem="gob-gp-deH" secondAttribute="trailing" constant="2" id="DxI-zA-T1T"/>
-                                    <constraint firstItem="532-jX-dLR" firstAttribute="top" secondItem="y3X-qF-kFL" secondAttribute="bottom" constant="35" id="E7y-W5-xL6"/>
+                                    <constraint firstItem="532-jX-dLR" firstAttribute="top" secondItem="y3X-qF-kFL" secondAttribute="bottom" constant="27" id="E7y-W5-xL6"/>
                                     <constraint firstItem="hiL-EZ-khr" firstAttribute="top" secondItem="IYN-lt-mIo" secondAttribute="top" constant="19" id="F73-nb-ETh"/>
                                     <constraint firstItem="3cp-pi-o5X" firstAttribute="centerX" secondItem="gob-gp-deH" secondAttribute="centerX" id="Fdv-mj-Fhm"/>
                                     <constraint firstItem="532-jX-dLR" firstAttribute="centerX" secondItem="3cp-pi-o5X" secondAttribute="centerX" id="Gr4-tp-NY6"/>
@@ -155,7 +155,7 @@
                                     <constraint firstAttribute="trailing" secondItem="532-jX-dLR" secondAttribute="trailing" constant="109" id="veC-Vc-d2j"/>
                                     <constraint firstItem="YPJ-50-u2N" firstAttribute="top" secondItem="GAn-bd-Zyo" secondAttribute="bottom" constant="35" id="vnn-li-VL2"/>
                                     <constraint firstItem="YPJ-50-u2N" firstAttribute="leading" secondItem="IYN-lt-mIo" secondAttribute="leading" constant="25" id="xQR-Nv-IYi"/>
-                                    <constraint firstItem="532-jX-dLR" firstAttribute="top" secondItem="y3X-qF-kFL" secondAttribute="bottom" constant="35" id="zbk-0e-vxF"/>
+                                    <constraint firstItem="532-jX-dLR" firstAttribute="top" secondItem="y3X-qF-kFL" secondAttribute="bottom" constant="27" id="zbk-0e-vxF"/>
                                 </constraints>
                             </view>
                         </subviews>
