@@ -8,19 +8,21 @@
 
 import UIKit
 import Firebase
+import Nuke
 
 class BarDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    //@IBOutlet weak var contentViewHeader: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var bestBitsCollectionView: UICollectionView!
+    @IBOutlet weak var headerImageView: UIImageView!
     
-    //var bestBitsArray = ["Rooftop Bar", "Dog Friendly", "Beer Garden", "Lots of Gin"]
     var bestBitsArray: [String] = []
     var barTitle: String = ""
     var barSubtitle: String = ""
     var barID: String!
+    var headerImageURL: String!
+    var imageCollectionURLs: [String] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -32,8 +34,6 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
         super.viewDidLoad()
         titleLabel.text = barTitle
         subtitleLabel.text = barSubtitle
-        // Do any additional setup after loading the view.
-        //contentViewHeader.layer.cornerRadius = 16
         bestBitsCollectionView.delegate = self
         bestBitsCollectionView.dataSource = self
     }
@@ -48,8 +48,16 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
                 return
             }
             
-            self.bestBitsArray = document["bestBits"] as! [String]
-            self.bestBitsCollectionView.reloadData()
+            let urlArray = document["imageCollectionURLs"] as! [String]
+            self.imageCollectionURLs = urlArray
+            print("BAR DETAIL IMAGE COUNT: \(self.imageCollectionURLs.count)")
+            
+            DispatchQueue.main.async {
+                self.headerImageURL = document["headerImageURL"] as? String
+                self.bestBitsArray = document["bestBits"] as! [String]
+                self.bestBitsCollectionView.reloadData()
+                Nuke.loadImage(with: URL(string: self.headerImageURL)!, into: self.headerImageView)
+            }
         }
     }
     
@@ -83,13 +91,12 @@ class BarDetailViewController: UIViewController, UICollectionViewDataSource, UIC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         var containerViewController: ReviewsViewController?
-//        if let vc = segue.destination as? ReviewsViewController {
-//            vc.barID = self.barID
-//        }
+        var imageContainerViewController: PhotosViewController?
         
-        if segue.identifier == "Reviews" {
-            containerViewController = segue.destination as? ReviewsViewController
-            containerViewController?.barID = barID!
+        if let vc = segue.destination as? ReviewsViewController {
+            vc.barID = self.barID
+        } else if let vc2 = segue.destination as? PhotosViewController {
+            vc2.barID = self.barID
         }
     }
     

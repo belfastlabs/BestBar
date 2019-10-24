@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import Nuke
+import Firebase
 
 class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var photosCollectionView: UICollectionView!
+
+    var imageCollectionURLs: [String] = []
+    var barID: String!
     
-    var imageNameArray: [UIImage] = [UIImage(imageLiteralResourceName: "DSC0242-684x1024.jpg"), UIImage(imageLiteralResourceName: "745A1321-683x1024.jpg"), UIImage(imageLiteralResourceName: "DSC_6208-insta-683x1024.jpg")]
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fetchPhotos()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,44 +29,52 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
         photosCollectionView.dataSource = self
         photosCollectionView.backgroundColor = #colorLiteral(red: 0.09410236031, green: 0.09412645549, blue: 0.09410081059, alpha: 1)
         // Do any additional setup after loading the view.
+        print("Image count: \(imageCollectionURLs.count)")
+    }
+    
+    func fetchPhotos() {
+        let db = Firestore.firestore()
+        let dbCall = "belfast/\(barID!)"
+                
+        db.document(dbCall).getDocument() { (documentSnapshot, err) in
+            guard let document = documentSnapshot?.data() else {
+                print("Error retrieving reviews: \(err!)")
+                return
+            }
+                    
+            let urlArray = document["imageCollectionURLs"] as! [String]
+            self.imageCollectionURLs = urlArray
+            print("BAR DETAIL IMAGE COUNT: \(self.imageCollectionURLs.count)")
+                    
+            DispatchQueue.main.async {
+                self.imageCollectionURLs = urlArray
+                print("BAR DETAIL IMAGE COUNT: \(self.imageCollectionURLs.count)")
+                self.photosCollectionView.reloadData()
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageNameArray.count
+        return imageCollectionURLs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let noOfCellsInRow = 3
-//
-//        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-//
-//        let totalSpace = flowLayout.sectionInset.left
-//            + flowLayout.sectionInset.right
-//            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
-//
-//        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
-//
-//        return CGSize(width: size, height: size)
+        let noOfCellsInRow = 3
+
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
 
-        let numberofItem: CGFloat = 3
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
 
-        let collectionViewWidth = collectionView.bounds.width
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
 
-        let extraSpace = (numberofItem - 1) * flowLayout.minimumInteritemSpacing
-
-        let inset = flowLayout.sectionInset.right + flowLayout.sectionInset.left
-
-        let width = Int((collectionViewWidth - extraSpace - inset) / numberofItem)
-
-        print(width)
-
-        return CGSize(width: width, height: width)
+        return CGSize(width: size, height: size)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BarPhotoCell", for: indexPath) as! BarPhotoCell
-        cell.photoView.image = imageNameArray[indexPath.row]
+        Nuke.loadImage(with: URL(string: imageCollectionURLs[indexPath.row])!, into: cell.photoView)
         cell.layer.cornerRadius = 12
         
         return cell

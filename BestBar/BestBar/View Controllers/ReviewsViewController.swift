@@ -20,19 +20,13 @@ class ReviewsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewWillAppear(_ animated: Bool) {
         fetchReviews()
-        reviewList.printContents()
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewsCollectionView.delegate = self
         reviewsCollectionView.dataSource = self
-        print("BAR ID: \(barID!)")
-        // Do any additional setup after loading the view.
-        //fetchReviews()
         reviewsCollectionView.reloadData()
-        //reviewList.printContents()
     }
     
     func fetchReviews() {
@@ -57,7 +51,6 @@ class ReviewsViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.reviewsCollectionView.reloadData()
             }
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,11 +64,6 @@ class ReviewsViewController: UIViewController, UICollectionViewDelegate, UIColle
         cell.rating.rating = ReviewList.reviewList[indexPath.row].rating
         cell.reviewHeadingLabel.text = ReviewList.reviewList[indexPath.row].heading
         cell.reviewText.text = ReviewList.reviewList[indexPath.row].review
-        
-        
-//        cell.rating.rating = 4.5
-//        cell.reviewHeadingLabel.text = "BEST BAR EVER"
-//        cell.reviewText.text = "Oh i love this bar so much its so much fun ahhhhh"
         
         return cell
     }
