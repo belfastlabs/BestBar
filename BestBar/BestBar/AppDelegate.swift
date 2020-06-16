@@ -7,17 +7,21 @@
 //
 
 import UIKit
-import Firebase
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let initialView = ContentView()
+        let hostVC = UIHostingController(rootView: initialView)
+        
+        self.window?.rootViewController = hostVC
+        self.window?.makeKeyAndVisible()
         return true
     }
 

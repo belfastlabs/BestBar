@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-import Firebase
+import SwiftUI
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -18,6 +18,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var barAnnotationList = BarAnnotationList()
     
     @IBOutlet weak var mapView: MKMapView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        let slideOverCardView = SlideOverCard(isOpen: false, maxHeight: <#T##CGFloat#>, content: <#T##() -> _#>)
+//        let viewController = UIHostingController(rootView: slideOverCardView)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,8 +43,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: coor, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             mapView.setRegion(region, animated: true)
         }
-        //centerMapOnLocation(location: initialLocation)
-        fetchBarLocations()
+        centerMapOnLocation(location: initialLocation)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -54,31 +61,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
-    }
-    
-    func fetchBarLocations() {
-        let db = Firestore.firestore()
-        let dbCall = "belfast"
-        
-        db.collection(dbCall).addSnapshotListener() { (querySnapshot, err) in
-            guard let documents = querySnapshot?.documents else {
-                print("Error retrieving locations: \(err!)")
-                return
-            }
-            
-            let annotationMap = documents.compactMap({
-                $0.data().flatMap({ (data) in
-                    return BarAnnotation(dictionary: data)
-                })
-            })
-            
-            DispatchQueue.main.async {
-                for annotation in annotationMap {
-                    self.mapView.addAnnotation(annotation)
-                }
-                self.barAnnotationList.populateList(map: annotationMap)
-            }
-        }
     }
 
     /*
@@ -116,35 +98,8 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let vc = UIStoryboard(name: "BarDetailView", bundle: nil).instantiateViewController(withIdentifier: "BarDetailViewController") as! BarDetailViewController
-        vc.barTitle = ((view.annotation?.title)!)!
-        vc.barSubtitle = ((view.annotation?.subtitle)!)!
-        
-        var barIDString: String!
-        switch ((view.annotation?.title)!)! {
-        case "The Thirsty Goat":
-            barIDString = "thirsty-goat"
-            vc.barID = barIDString!
-        case "The Spaniard":
-            barIDString = "spaniard"
-            vc.barID = barIDString!
-        case "The National":
-            barIDString = "national"
-            vc.barID = barIDString!
-        case "The Merchant Hotel":
-            barIDString = "merchant"
-            vc.barID = barIDString!
-        case "Dirty Onion":
-            barIDString = "dirty-onion"
-            vc.barID = barIDString!
-        case "The Cloth Ear":
-            barIDString = "cloth-ear"
-            vc.barID = barIDString!
-        default:
-            barIDString = "thirsty-goat"
-            vc.barID = barIDString!
-        }
-        
+        let vc = UIStoryboard(name: "BarDetailView", bundle: nil).instantiateViewController(withIdentifier: "BarDetailViewController")
+
         self.present(vc, animated: true, completion: nil)
     }
 }

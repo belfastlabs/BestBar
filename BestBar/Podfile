@@ -6,10 +6,10 @@ target 'BestBar' do
   use_frameworks!
 
   # Pods for BestBar
-  pod 'Firebase'
-  pod 'Firebase/Firestore'
-  pod 'Cosmos', '~> 20.0'
-  pod 'Nuke', '~> 8.0'
-  pod 'SKPhotoBrowser'
-  pod 'lottie-ios'
+#  pod 'Firebase'
+#  pod 'Firebase/Firestore'
+#  pod 'Cosmos', '~> 20.0'
+#  pod 'Nuke', '~> 8.0'
+#  pod 'SKPhotoBrowser'
+#  pod 'lottie-ios'
 end

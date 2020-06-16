@@ -7,13 +7,11 @@
 //
 
 import Foundation
-import Firebase
-import FirebaseFirestore
 import MapKit
 
 
-public extension CLLocationCoordinate2D {
-    static func locationWithGeopoint(geopoint: GeoPoint) -> CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: geopoint.latitude, longitude: geopoint.longitude)
-    }
-}
+//public extension CLLocationCoordinate2D {
+//    static func locationWithGeopoint(geopoint: GeoPoint) -> CLLocationCoordinate2D {
+//        return CLLocationCoordinate2D(latitude: geopoint.latitude, longitude: geopoint.longitude)
+//    }
+//}

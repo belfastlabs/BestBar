@@ -8,7 +8,6 @@
 
 import Foundation
 import MapKit
-import FirebaseFirestore
 
 class BarAnnotation: NSObject, MKAnnotation {
     
@@ -36,19 +35,19 @@ class BarAnnotation: NSObject, MKAnnotation {
     }
 }
 
-extension BarAnnotation {
-    convenience init?(dictionary: [String : Any]) {
-        guard let title = dictionary["title"] as? String,
-            let subtitle = dictionary["subtitle"] as? String,
-            let coordinate = CLLocationCoordinate2D.locationWithGeopoint(geopoint: (dictionary["location"] as? GeoPoint)!) as? CLLocationCoordinate2D,
-            let barID = dictionary["barID"] as? String else { return nil }
-        
-        self.init(title: title,
-                  subtitle: subtitle,
-                  coordinate: coordinate,
-                  barID: barID)
-    }
-}
+//extension BarAnnotation {
+//    convenience init?(dictionary: [String : Any]) {
+//        guard let title = dictionary["title"] as? String,
+//            let subtitle = dictionary["subtitle"] as? String,
+//            let coordinate = CLLocationCoordinate2D.locationWithGeopoint(geopoint: (dictionary["location"] as? GeoPoint)!) as? CLLocationCoordinate2D,
+//            let barID = dictionary["barID"] as? String else { return nil }
+//        
+//        self.init(title: title,
+//                  subtitle: subtitle,
+//                  coordinate: coordinate,
+//                  barID: barID)
+//    }
+//}
 
 class BarAnnotationList: NSObject {
     private static var barAnnotations: [BarAnnotation] = []
